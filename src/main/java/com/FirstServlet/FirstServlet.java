@@ -11,10 +11,10 @@ import java.io.PrintWriter;
 @WebServlet("/FirstServlet")
 public class FirstServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.setContentType("text/html");
-        PrintWriter out = resp.getWriter();
-        out.println("<h1>Hello World Prasad My First Servlet</h1>");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+        out.println("<h1>Hello World Prasad My First Servlet</h1><a href=index.jsp>Hello World page</a>");
         out.close();
     }
 }
